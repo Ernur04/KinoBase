@@ -34,33 +34,47 @@
         </div>
         <!-- Кнопки -->
         <div class="buttons">
-            <button type="button" class="btn" aria-label="Сменить тему">
+            <button type="button" class="btn" id="theme-toggle" aria-label="Сменить тему">
                 <i class="fa-solid fa-moon"></i>
             </button>
-            <button type="button" class="btn" aria-label="Открыть календарь">
+            <button type="button" class="btn" id="calendar-toggle" aria-label="Открыть календарь">
                 <i class="fa-solid fa-calendar-days"></i>
             </button>
         </div>
     </header>
-    <!-- Навигация -->
-    <nav>
-        <ul>
-            <li><a href="#">Фильмы</a></li>
-            <li><a href="#">Сериалы</a></li>
-            <li><a href="#">Аниме</a></li>
-            <li><a href="#">Мультфильмы</a></li>
-        </ul>
-    </nav>
-    <!-- Главная секция -->
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Добро пожаловать в KinoBase</h1>
-                <p>Ваша персональная база фильмов и сериалов</p>
-                <button type="button" class="btn btn-primary">Начать просмотр</button>
+
+    <!-- Модальное окно календаря -->
+    <div class="calendar-modal" id="calendar-modal">
+        <div class="calendar-content">
+            <div class="calendar-header">
+                <h3>Календарь релизов</h3>
+                <button class="close-btn" id="calendar-close"><i class="fa-solid fa-xmark"></i></button>
             </div>
-        </section>
-    </main>
+            <div class="calendar-body">
+                <p>Здесь скоро появится расписание выхода новых серий и премьер фильмов!</p>
+                <!-- Место для интеграции реального календаря -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал (Footer) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">О проекте</a>
+                <a href="#">Правила</a>
+                <a href="#">Контакты</a>
+                <a href="#">Правообладателям</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2026 KinoBase. Все права защищены.</p>
+    </footer>
+
     <!-- Подключение скрипта -->
     <script src="js/script.js"></script>
 </body>
