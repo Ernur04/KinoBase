@@ -25,26 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
     });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
 
-    // --- Логика для календаря ---
-    const calendarToggleBtn = document.getElementById('calendar-toggle');
-    const calendarModal = document.getElementById('calendar-modal');
-    const calendarCloseBtn = document.getElementById('calendar-close');
+    searchForm.addEventListener('submit', (event) => {
+        // Останавливаем стандартную перезагрузку страницы
+        event.preventDefault(); 
 
-    // Открыть календарь
-    calendarToggleBtn.addEventListener('click', () => {
-        calendarModal.classList.add('show');
-    });
+        const query = searchInput.value.trim();
 
-    // Закрыть календарь по клику на крестик
-    calendarCloseBtn.addEventListener('click', () => {
-        calendarModal.classList.remove('show');
-    });
-
-    // Закрыть календарь по клику вне контента (на затемненный фон)
-    calendarModal.addEventListener('click', (e) => {
-        if (e.target === calendarModal) {
-            calendarModal.classList.remove('show');
+        if (query) {
+            performSearch(query);
+        } else {
+            console.warn('Поле поиска пустое!');
         }
     });
+
+    function performSearch(query) {
+        // Здесь ваша логика (например, запрос к API)
+        console.log(`Ищем: ${query}`);
+        
+        // Или перенаправление, если нужно:
+        // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+    }
 });

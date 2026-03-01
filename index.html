@@ -34,28 +34,26 @@
         </div>
         <!-- Кнопки -->
         <div class="buttons">
+            <!-- Поле поиска -->
+            <form id="search-form" class="search-form" action="/search" method="GET" role="search">
+                <input 
+                    type="search" 
+                    name="q" 
+                    id="search-input" 
+                    placeholder="Найти фильмы, аниме, сериалы..." 
+                    aria-label="Поиск по сайту" 
+                    required>
+                
+                <button type="submit" aria-label="Начать поиск">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
             <button type="button" class="btn" id="theme-toggle" aria-label="Сменить тему">
                 <i class="fa-solid fa-moon"></i>
-            </button>
-            <button type="button" class="btn" id="calendar-toggle" aria-label="Открыть календарь">
-                <i class="fa-solid fa-calendar-days"></i>
             </button>
         </div>
     </header>
 
-    <!-- Модальное окно календаря -->
-    <div class="calendar-modal" id="calendar-modal">
-        <div class="calendar-content">
-            <div class="calendar-header">
-                <h3>Календарь релизов</h3>
-                <button class="close-btn" id="calendar-close"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="calendar-body">
-                <p>Здесь скоро появится расписание выхода новых серий и премьер фильмов!</p>
-                <!-- Место для интеграции реального календаря -->
-            </div>
-        </div>
-    </div>
 
     <!-- Подвал (Footer) -->
     <footer>
