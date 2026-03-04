@@ -32,6 +32,27 @@
             <i class="fa-solid fa-clapperboard"></i>
             <span>KinoBase</span>
         </div>
+
+        <!-- Навигация -->
+        <nav class="header-nav">
+            <a href="#" class="nav-link active">Главная</a>
+            <a href="#" class="nav-link">Фильмы</a>
+            <a href="#" class="nav-link">Сериалы</a>
+            <a href="#" class="nav-link">Аниме</a>
+            <a href="#" class="nav-link">Мультфильмы</a>
+            <!-- Выпадающее меню Жанры -->
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Жанры <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#">Боевик</a>
+                    <a href="#">Комедия</a>
+                    <a href="#">Драма</a>
+                    <a href="#">Триллер</a>
+                    <a href="#">Фантастика</a>
+                    <a href="#">Фэнтези</a>
+                </div>
+            </div>
+        </nav>
         <!-- Кнопки -->
         <div class="buttons">
             <!-- Поле поиска -->
@@ -43,6 +64,7 @@
                     <i class="fa-solid fa-search"></i>
                 </button>
             </form>
+            <!-- Кнопка переключения темы -->
             <button type="button" class="btn" id="theme-toggle" aria-label="Сменить тему">
                 <i class="fa-solid fa-moon"></i>
             </button>
