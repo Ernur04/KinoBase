@@ -36,14 +36,9 @@
         <div class="buttons">
             <!-- Поле поиска -->
             <form id="search-form" class="search-form" action="/search" method="GET" role="search">
-                <input 
-                    type="search" 
-                    name="q" 
-                    id="search-input" 
-                    placeholder="Найти фильмы, аниме, сериалы..." 
-                    aria-label="Поиск по сайту" 
-                    required>
-                
+                <input type="search" name="q" id="search-input" placeholder="Найти фильмы, аниме, сериалы..."
+                    aria-label="Поиск по сайту" required>
+
                 <button type="submit" aria-label="Начать поиск">
                     <i class="fa-solid fa-search"></i>
                 </button>
@@ -54,6 +49,428 @@
         </div>
     </header>
 
+    <main>
+        <!-- Баннер с новинками (Слайдер) -->
+        <section class="banner-slider">
+            <h2 class="section-title">🎬 Баннер с новинками</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" aria-label="Предыдущий слайд"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <div class="slider-track" id="banner-track">
+                    <!-- Слайд 1 -->
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&q=80"
+                            alt="Новинка 1">
+                        <div class="slide-info">
+                            <h3>Интерстеллар 2: Возвращение</h3>
+                            <p>Фантастика, Драма • 2026</p>
+                        </div>
+                    </div>
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=1200&q=80"
+                            alt="Новинка 2">
+                        <div class="slide-info">
+                            <h3>Киберпанк: Эхо города</h3>
+                            <p>Боевик, Фантастика • 2026</p>
+                        </div>
+                    </div>
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80"
+                            alt="Новинка 3">
+                        <div class="slide-info">
+                            <h3>За гранью реальности</h3>
+                            <p>Триллер, Детектив • 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" aria-label="Следующий слайд"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Новинки (Сетка) -->
+        <section class="new-movies">
+            <h2 class="section-title">🆕 Новинки</h2>
+            <div class="movies-grid">
+                <!-- Новинка 1 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Создатель</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 2 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.1</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Годзилла: Минус один</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 3 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Наполеон</h3>
+                        <p class="movie-genre">История, Драма • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 4 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Убийца</h3>
+                        <p class="movie-genre">Криминал, Триллер • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 5 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.1</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Годзилла: Минус один</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 6 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Наполеон</h3>
+                        <p class="movie-genre">История, Драма • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 7 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Убийца</h3>
+                        <p class="movie-genre">Криминал, Триллер • 2023</p>
+                    </div>
+                </a>
+                <!-- Новинка 8 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Начало</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2010</p>
+                    </div>
+                </a>
+                <!-- Новинка 9 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Интерстеллар</h3>
+                        <p class="movie-genre">Фантастика, Драма • 2014</p>
+                    </div>
+                </a>
+                <!-- Новинка 10 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Пираты Карибского моря</h3>
+                        <p class="movie-genre">Фэнтези, Приключения • 2003</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Популярные фильмы -->
+        <section class="popular-movies">
+            <h2 class="section-title">⭐ Популярные фильмы</h2>
+            <div class="movies-grid">
+                <!-- Фильм 1 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Начало</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2010</p>
+                    </div>
+                </a>
+                <!-- Фильм 2 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Интерстеллар</h3>
+                        <p class="movie-genre">Фантастика, Драма • 2014</p>
+                    </div>
+                </a>
+                <!-- Фильм 3 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Пираты Карибского моря</h3>
+                        <p class="movie-genre">Фэнтези, Приключения • 2003</p>
+                    </div>
+                </a>
+                <!-- Фильм 4 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">9.2</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Темный рыцарь</h3>
+                        <p class="movie-genre">Боевик, Криминал • 2008</p>
+                    </div>
+                </a>
+                <!-- Фильм 5 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1535016120720-40c746a51d8b?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.7</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Матрица</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 1999</p>
+                    </div>
+                </a>
+                <!-- Фильм 6 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1618331835717-801e976710b2?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Властелин колец: Братство кольца</h3>
+                        <p class="movie-genre">Фэнтези, Приключения • 2001</p>
+                    </div>
+                </a>
+                <!-- Фильм 7 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Криминальное чтиво</h3>
+                        <p class="movie-genre">Триллер, Комедия • 1994</p>
+                    </div>
+                </a>
+                <!-- Фильм 8 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1561149877-84d257216067?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.4</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Мстители: Война бесконечности</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2018</p>
+                    </div>
+                </a>
+                <!-- Фильм 9 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1440407876336-62333a6f010c?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Форрест Гамп</h3>
+                        <p class="movie-genre">Драма, Мелодрама • 1994</p>
+                    </div>
+                </a>
+                <!-- Фильм 10 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1502444330042-d1a1dd197a95?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Гладиатор</h3>
+                        <p class="movie-genre">Боевик, Драма • 2000</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Тренды недели -->
+        <section class="trending-weekly">
+            <h2 class="section-title">🔥 Тренды недели</h2>
+            <div class="movies-grid">
+                <!-- Тренд 1 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.2</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Дюна: Часть вторая</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2024</p>
+                    </div>
+                </a>
+                <!-- Тренд 2 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.3</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Дэдпул и Росомаха</h3>
+                        <p class="movie-genre">Фантастика, Комедия • 2024</p>
+                    </div>
+                </a>
+                <!-- Тренд 3 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1498747946579-bde604cb8f44?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.8</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Барби</h3>
+                        <p class="movie-genre">Комедия, Фэнтези • 2023</p>
+                    </div>
+                </a>
+                <!-- Тренд 4 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1618519764620-7403abdbdf9c?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.9</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Аватар: Путь воды</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2022</p>
+                    </div>
+                </a>
+                <!-- Тренд 5 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.6</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Сёгун (Сериал)</h3>
+                        <p class="movie-genre">Драма, История • 2024</p>
+                    </div>
+                </a>
+                <!-- Тренд 6 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.1</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Фоллаут (Сериал)</h3>
+                        <p class="movie-genre">Фантастика, Боевик • 2024</p>
+                    </div>
+                </a>
+                <!-- Тренд 7 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1579566346927-c68383817a25?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.7</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Оппенгеймер</h3>
+                        <p class="movie-genre">Биография, Драма • 2023</p>
+                    </div>
+                </a>
+                <!-- Тренд 8 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.0</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Убийцы цветочной луны</h3>
+                        <p class="movie-genre">Триллер, Драма • 2023</p>
+                    </div>
+                </a>
+                <!-- Тренд 9 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">7.5</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Пчеловод</h3>
+                        <p class="movie-genre">Боевик, Триллер • 2024</p>
+                    </div>
+                </a>
+                <!-- Тренд 10 -->
+                <a href="#" class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80"
+                            alt="Постер">
+                        <div class="movie-rating">8.2</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Мальчик и птица</h3>
+                        <p class="movie-genre">Аниме, Фэнтези • 2023</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Подвал (Footer) -->
     <footer>

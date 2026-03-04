@@ -201,10 +201,12 @@ body.light-theme .footer-copyright {
     align-items: center;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 25px; /* Скругление для "pill" формы */
+    border-radius: 25px;
+    /* Скругление для "pill" формы */
     padding: 5px 15px;
     transition: all 0.3s ease;
-    width: 300px; /* Или auto, если нужно по контенту */
+    width: 300px;
+    /* Или auto, если нужно по контенту */
 }
 
 /* Эффект подсветки при клике в поиск */
@@ -260,4 +262,225 @@ body.light-theme .search-form:focus-within {
 
 body.light-theme .search-form button {
     color: #555555;
+}
+
+/* Основной контент (Main) */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+/* Баннер с новинками (Слайдер) */
+.banner-slider {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid #e50914;
+}
+
+body.light-theme .section-title {
+    color: #333333;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body.light-theme .slider-container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 40px 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.slide-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #e0e0e0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопки слайдера */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.slider-btn:hover {
+    background: #e50914;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Секции с фильмами (Популярные, Тренды, Новинки и т.д.) */
+.popular-movies,
+.trending-weekly,
+.new-movies {
+    margin-bottom: 40px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.movie-poster {
+    position: relative;
+    width: 100%;
+    padding-top: 150%;
+    /* Пропорция постера 2:3 */
+}
+
+.movie-poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e50914;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
+}
+
+.movie-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.movie-card:hover .movie-title {
+    color: #e50914;
+}
+
+.movie-genre {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Light Theme overrides */
+body.light-theme .movie-card {
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .movie-card:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .movie-title {
+    color: #333;
+}
+
+body.light-theme .movie-card:hover .movie-title {
+    color: #e50914;
 }
